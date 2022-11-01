@@ -12,7 +12,5 @@ public class Main {
         System.out.println("book1.getYearOfPublication = " + book1.getYearOfPublication());
         System.out.println(antonChehov);
         System.out.println(sergeyEsenin);
-        System.out.println(book1);
-        System.out.println(book2);
     }
 }
