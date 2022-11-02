@@ -15,10 +15,7 @@ public class Author {
 
     @Override
     public String toString() {
-        return "Author{" +
-                "firstName='" + firstName + '\'' +
-                ", secondName='" + secondName + '\'' +
-                '}';
+        return  firstName + " "+ secondName;
     }
 
     @Override
@@ -26,7 +23,7 @@ public class Author {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Author author = (Author) o;
-        return Objects.equals(firstName, author.firstName) && Objects.equals(secondName, author.secondName);
+        return firstName.equals (author.firstName) && secondName.equals(author.secondName);
     }
 
     @Override

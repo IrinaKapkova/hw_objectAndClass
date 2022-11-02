@@ -13,7 +13,7 @@ public class Book {
 
     }
 
-    public String getBookName(){return  bookName;}
+    public String getBookName(){return  this.bookName;}
     public Author getAuthor(){return author;
     }
     public int getYearOfPublication(){
@@ -24,9 +24,10 @@ public class Book {
     @Override
     public boolean equals (Object o){
         if (this == o) return true;
-        if (o == null || this.getClass() !=o.getClass()) return false;
+        if (o == null || getClass() !=o.getClass()) return false;
         Book book = (Book) o;
-        return Objects.equals (bookName, book.bookName) && Objects.equals(author, book.author) && yearOfPublication == book.yearOfPublication;}
+        return  bookName.equals(book.bookName) && author.equals(book.author) && yearOfPublication == book.yearOfPublication;
+    }
 
     @Override
     public  int hashCode() {
@@ -35,10 +36,6 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" +
-                "bookName='" + bookName + '\'' +
-                ", author=" + author +
-                ", yearOfPublication=" + yearOfPublication +
-                '}';
+        return bookName + " " + author + " " + yearOfPublication;
     }
 }
